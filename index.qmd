@@ -1,13 +1,14 @@
 ---
 title: "Morgan Yashchenko"
 toc: false
-image: "your photo.jpg"
+image: "photo_of_self.JPG"
 about:
   template: jolla
   links:
   - text: github
-    href: link
+    href: morganyashchenko.github.io
   - text: email
+    href: moragn-yashchenko@ou.edu
   
 ---
 
@@ -19,7 +20,6 @@ Welcome to my research profile website. I'm a student in the Intro to Reproducib
 
 ## About Me
 
-Replace this section with information about yourself:
 
 - **Name:** Morgan Yashchenko
 - **Institution:** University of Oklahoma Health Campus

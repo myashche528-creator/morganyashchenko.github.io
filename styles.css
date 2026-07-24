@@ -2,36 +2,36 @@
 
 /* Main content styling */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Arial', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
 }
 
 /* Headings */
 h1, h2, h3 {
-  color: #2c3e50;
+  color: #a37487;
   margin-top: 1.5em;
 }
 
 /* Links */
 a {
-  color: #3498db;
+  color: #a37487;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #2980b9;
+  color: #a37487;
 }
 
 /* Code blocks */
 code {
-  background-color: #f4f4f4;
+  background-color: #f0c0d3;
   padding: 0.2em 0.4em;
   border-radius: 3px;
 }
 
 pre {
-  background-color: #f4f4f4;
+  background-color: #f0c0d3;
   padding: 1em;
   border-radius: 5px;
   overflow-x: auto;
@@ -46,23 +46,23 @@ table {
 
 table th,
 table td {
-  border: 1px solid #ddd;
+  border: 1px solid #a37487;
   padding: 0.75em;
   text-align: left;
 }
 
 table th {
-  background-color: #ecf0f1;
+  background-color: #f0c0d3;
   font-weight: bold;
 }
 
 table tr:hover {
-  background-color: #f9f9f9;
+  background-color: #f0c0d3;
 }
 
 /* Blockquotes */
 blockquote {
-  border-left: 4px solid #3498db;
+  border-left: 4px solid #a37487;
   padding-left: 1em;
   color: #666;
   font-style: italic;
