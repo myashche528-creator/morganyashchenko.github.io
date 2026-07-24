@@ -1,14 +1,14 @@
 ---
-title: "Your Name"
+title: "Morgan Yashchenko"
 toc: false
 image: "your photo.jpg"
 about:
-  template: trestles
+  template: jolla
   links:
-  - text: GitHub
+  - text: github
     href: link
   - text: email
-    href:  link
+  
 ---
 
 ::: {.columnpage}
@@ -21,14 +21,14 @@ Welcome to my research profile website. I'm a student in the Intro to Reproducib
 
 Replace this section with information about yourself:
 
-- **Name:** Your Name Here
-- **Institution:** Your University
-- **Research Interests:** Add your research interests here
-- **Email:** your.email@university.edu
+- **Name:** Morgan Yashchenko
+- **Institution:** University of Oklahoma Health Campus
+- **Research Interests:** T cells and neutrophils in Polycystic Kidney Disease
+- **Email:** morgan-yashchenko@ou.edu
 
 ## My Research
 
-I'm interested in understanding [your topic area]. Through this course, I've learned how to:
+I'm interested in understanding how immune cells and inflammation promote rapidly progressing Polycystic Kidney Disease. Through this course, I've learned how to:
 
 - Use R for data analysis
 - Create reproducible research workflows
