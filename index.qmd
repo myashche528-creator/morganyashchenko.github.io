@@ -6,9 +6,9 @@ about:
   template: jolla
   links:
   - text: github
-    href: morganyashchenko.github.io
+    href: https://myashche528-creator.github.io/morganyashchenko.github.io/
   - text: email
-    href: moragn-yashchenko@ou.edu
+    href: morgan-yashchenko@ou.edu
   
 ---
 
