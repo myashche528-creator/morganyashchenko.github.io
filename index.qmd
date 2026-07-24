@@ -5,10 +5,12 @@ image: "photo_of_self.JPG"
 about:
   template: jolla
   links:
-  - text: github
+  - text: github <i class="bi bi-github"></i>
     href: https://myashche528-creator.github.io/morganyashchenko.github.io/
-  - text: email
+  - text: email <i class="bi bi-envelope"></i>
     href: morgan-yashchenko@ou.edu
+  - text: orcid <i class="bi bi-person-square"></i>
+    href: https://orcid.org/0009-0002-6582-8645
   
 ---
 
@@ -18,7 +20,7 @@ about:
 
 Welcome to my research profile website. I'm a student in the Intro to Reproducible Data Analysis Using R course.
 
-## About Me
+## About Me 
 
 
 - **Name:** Morgan Yashchenko
@@ -44,7 +46,7 @@ As my research progresses, I'll continue adding:
 - Publications
 - Conference posters
 - New analyses and projects
-- Additional resources
+- Achievements and awards
 
 ---
 

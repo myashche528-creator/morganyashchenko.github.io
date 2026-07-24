@@ -1,6 +1,6 @@
 ---
 title: "Final Report: Are Th17 cells or neutrophils associated with rapid PKD?"
-date: 2026-06-04
+date: 2026-07-24
 author: "Morgan Yashchenko"
 ---
 
@@ -8,7 +8,7 @@ author: "Morgan Yashchenko"
 
 ## Introduction
 
-Consensus in the PKD field is that kidney injury accelerates cystic kidney disease in mice. This phenomenon has never been definitively shown in humans, but it is assumed to be the same, therefore immense caution is taken to try and prevent injury in human PKD kidneys.
+Consensus in the Polycystic Kidney Disease (PKD) field is that kidney injury accelerates cystic kidney disease in mice. This phenomenon has never been definitively shown in humans, but it is assumed to be the same, therefore immense caution is taken to try and prevent injury in human PKD kidneys.
 
 With any tissue injury comes inflammation. This is characterized by infiltration of immune cells, production of inflammatory cytokines, and clearing of dead/defective host cells.
 
@@ -20,11 +20,13 @@ Let's do some EDA to see if there is anything that sticks out.
 
 ## Methods
 
-We performed flow cytometry, serum BUN assay, H&E and PicroSirius histology for cystic analysis and fibrosis measurements on the following groups:
+We performed flow cytometry, serum blood urea nitrogen (BUN) assay, H&E and PicroSirius histology for cystic analysis and fibrosis measurements on the following groups:
+
 - injured cystic mice
 - injured cystic mice with interferon gamma KO
 
 Our controls groups were:
+
 - injured noncystic mice
 - injured noncystic mice with interferon gamma KO
 - non-injured cystic mice
@@ -41,11 +43,13 @@ Share your findings here. You can include:
 
 ### Example Code Block
 
-Here's a sample R code block:
+First, here are the packages used for this analysis:
 
 ```{r}
 # Load a library
 library(ggplot2)
+library(tidyverse)
+library(tidymodels)
 
 # Create some sample data
 data <- data.frame(
@@ -56,6 +60,38 @@ data <- data.frame(
 # Make a plot
 plot(data$x, data$y)
 ```
+
+
+Now, lets look at the data. What groups do we have?
+```{r}
+#
+
+```
+There are a lot of comparisons we can make, but let's choose the most relevant to our question. We first want to ask:
+
+Do Th17 cell numbers correlate with disease parameters? (grid)
+
+So lets compare Th17 cell values per sample with:
+
+KW/BW?
+Cystic index?
+fibrosis?
+BUN?
+
+Do neutrophil numbers correlate with disease parameters? (grid)
+KW/BW?
+Cystic index?
+Fibrosis?
+BUN?
+
+
+What about in our non-injured, rapidly-progressing model?
+Th17 and neutrophil correllations of parameters
+
+heatmap?
+
+
+
 
 ### Example Table
 
@@ -78,4 +114,4 @@ Add any references to papers, data sources, or resources you used.
 
 ---
 
-**Last updated:** June 2026
+**Last updated:** July 2026
