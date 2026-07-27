@@ -23,10 +23,10 @@ Welcome to my research profile website. I'm a student in the Intro to Reproducib
 ## About Me 
 
 
-- **Name:** Morgan Yashchenko (yuh-SHEN-koh)
-- **Institution:** University of Oklahoma Health Campus
-- **Research Interests:** T cells and neutrophils in Polycystic Kidney Disease
-- **Email:** morgan-yashchenko@ou.edu
+ -**Name:** Morgan Yashchenko (yuh-SHEN-koh)
+ -**Institution:** University of Oklahoma Health Campus
+ -**Research Interests:** T cells and neutrophils in Polycystic Kidney Disease
+ -**Email:** morgan-yashchenko@ou.edu
 
 ## My Research
 
