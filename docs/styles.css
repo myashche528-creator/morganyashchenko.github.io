@@ -14,7 +14,7 @@ h1, h2, h3 {
 
 /* Links */
 a {
-  color: #a37487;
+  color: #853454;
   text-decoration: none;
 }
 
@@ -46,7 +46,7 @@ table {
 
 table th,
 table td {
-  border: 1px solid #a37487;
+  border: 1px solid #bd694f;
   padding: 0.75em;
   text-align: left;
 }
@@ -62,7 +62,7 @@ table tr:hover {
 
 /* Blockquotes */
 blockquote {
-  border-left: 4px solid #a37487;
+  border-left: 4px solid #bd694f;
   padding-left: 1em;
   color: #a37487;
   font-style: italic;

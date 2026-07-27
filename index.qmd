@@ -6,9 +6,9 @@ about:
   template: jolla
   links:
   - text: github <i class="bi bi-github"></i>
-    href: https://myashche528-creator.github.io/morganyashchenko.github.io/
+    href: https://github.com/myashche528-creator
   - text: email <i class="bi bi-envelope"></i>
-    href: morgan-yashchenko@ou.edu
+    href: mailto: morgan-yashchenko@ou.edu
   - text: orcid <i class="bi bi-person-square"></i>
     href: https://orcid.org/0009-0002-6582-8645
   
@@ -23,7 +23,7 @@ Welcome to my research profile website. I'm a student in the Intro to Reproducib
 ## About Me 
 
 
-- **Name:** Morgan Yashchenko
+- **Name:** Morgan Yashchenko (yuh-SHEN-koh)
 - **Institution:** University of Oklahoma Health Campus
 - **Research Interests:** T cells and neutrophils in Polycystic Kidney Disease
 - **Email:** morgan-yashchenko@ou.edu
