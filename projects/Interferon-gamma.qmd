@@ -1,0 +1,18 @@
+---
+title: "Interferon-gamma"
+date: 2026-07-27
+author: "Morgan Yashchenko"
+format: html
+---
+
+# Interferon gamma inflammation drives rapidly progressing Polycystic Kidney Disease (PKD)
+
+## Introduction
+
+## Methods
+
+## Results
+
+## Discussion
+
+## Conclusions

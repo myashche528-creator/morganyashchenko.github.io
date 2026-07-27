@@ -2,11 +2,9 @@
 title: "Projects"
 ---
 
-# My Projects
-
 Here are my research projects and work:
 
-## Final Report
+### Final Report
 
 My final project for CELL 6351 - Intro to Reproducible Data Analysis Using R.
 
@@ -14,18 +12,9 @@ My final project for CELL 6351 - Intro to Reproducible Data Analysis Using R.
 
 ---
 
-## Adding More Projects
+### Interferon gamma
 
-As you continue your research journey, you can add more pages here! For example:
+Interferon gamma inflammation drives rapidly progressing Polycystic Kidney Disease
 
-- Conference posters
-- Publications
-- Data visualizations
-- Analysis write-ups
-- Project proposals
+[**View Interferon gamma** →](projects/Interferon-gamma.qmd)
 
-To add a new project:
-
-1. Create a new `.qmd` file in the `projects/` folder
-2. Add a link to it on this page
-3. Push to GitHub and your site updates automatically!

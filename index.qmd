@@ -8,7 +8,7 @@ about:
   - text: github <i class="bi bi-github"></i>
     href: https://github.com/myashche528-creator
   - text: email <i class="bi bi-envelope"></i>
-    href: mailto: morgan-yashchenko@ou.edu
+    href: mailto:morgan-yashchenko@ou.edu
   - text: orcid <i class="bi bi-person-square"></i>
     href: https://orcid.org/0009-0002-6582-8645
   
@@ -23,19 +23,21 @@ Welcome to my research profile website. I'm a student in the Intro to Reproducib
 ## About Me 
 
 
- -**Name:** Morgan Yashchenko (yuh-SHEN-koh)
- -**Institution:** University of Oklahoma Health Campus
- -**Research Interests:** T cells and neutrophils in Polycystic Kidney Disease
- -**Email:** morgan-yashchenko@ou.edu
+**Name:** Morgan Yashchenko (yuh-SHEN-koh)<br>
+**Institution:** University of Oklahoma Health Campus<br>
+**Research Interests:** T cells and neutrophils in Polycystic Kidney Disease<br>
+**Email:** morgan-yashchenko@ou.edu<br>
 
 ## My Research
 
 I'm interested in understanding how immune cells and inflammation promote rapidly progressing Polycystic Kidney Disease. Through this course, I've learned how to:
 
-- Use R for data analysis
-- Create reproducible research workflows
-- Build websites to share my work
-- Manage my research projects with Git and GitHub
+<ul style="padding-left: 1rem; margin-left: 0;">
+  <li>Use R for data analysis</li>
+  <li>Create reproducible research workflows</li>
+  <li>Build websites to share my work</li>
+  <li>Manage my research projects with Git and GitHub</li>
+</ul>
 
 ## This Website
 
@@ -43,11 +45,12 @@ This site showcases my research and projects. Check out my **Projects** page to 
 
 As my research progresses, I'll continue adding:
 
-- Publications
-- Conference posters
-- New analyses and projects
-- Achievements and awards
-
+<ul style="padding-left: 1rem; margin-left: 0;">
+  <li>Publications</li>
+  <li>Conference posters</li>
+  <li>New analyses and projects</li>
+  <li>Achievements and awards</li>
+</ul>
 ---
 
 **Keep exploring!** Navigate using the menu above.

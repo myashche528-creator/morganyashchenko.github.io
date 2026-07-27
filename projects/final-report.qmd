@@ -20,17 +20,35 @@ Let's do some EDA to see if there is anything that sticks out.
 
 ## Methods
 
+### For the injury model
+Biorender generated workflow image
+
+#### Analyses we performed
 We performed flow cytometry, serum blood urea nitrogen (BUN) assay, H&E and PicroSirius histology for cystic analysis and fibrosis measurements on the following groups:
 
-- injured cystic mice
-- injured cystic mice with interferon gamma KO
+#### Experimental groups
 
-Our controls groups were:
+| Cystic | Treatment | Interferon gamma |
+|--------|--------|---------|
+| Yes | injured | + |
+| Yes | injured | KO |
+| Yes | non injured | + |
+| Yes | non injured | KO |
+| No | injured | + |
+| No | injured | KO |
 
-- injured noncystic mice
-- injured noncystic mice with interferon gamma KO
-- non-injured cystic mice
-- non-injured cystic mice with interferon gamma KO
+### For the non-injury (juvenile induced) rapid model
+
+Biorender generated workflow image
+
+#### Experimental groups
+
+| Cystic | Treatment |
+|--------|--------|
+| Yes | XMG1.2 |
+| Yes | IgG isotype |
+| No | XMG1.2 |
+| No | IgG isotype |
 
 ## Results
 
@@ -69,7 +87,7 @@ Now, lets look at the data. What groups do we have?
 ```
 There are a lot of comparisons we can make, but let's choose the most relevant to our question. We first want to ask:
 
-Do Th17 cell numbers correlate with disease parameters? (grid)
+### Do Th17 cell numbers correlate with disease parameters? (grid)
 
 So lets compare Th17 cell values per sample with:
 
@@ -78,27 +96,18 @@ Cystic index?
 fibrosis?
 BUN?
 
-Do neutrophil numbers correlate with disease parameters? (grid)
+### Do neutrophil numbers correlate with disease parameters? (grid)
 KW/BW?
 Cystic index?
 Fibrosis?
 BUN?
 
 
-What about in our non-injured, rapidly-progressing model?
+### What about in our non-injured, rapidly-progressing model?
 Th17 and neutrophil correllations of parameters
 
 heatmap?
 
-
-
-
-### Example Table
-
-| Method | Result | P-value |
-|--------|--------|---------|
-| Analysis 1 | Significant | 0.01 |
-| Analysis 2 | Not Significant | 0.15 |
 
 ## Discussion
 
@@ -106,7 +115,7 @@ What do your results mean? How do they relate to your research question? What li
 
 ## Conclusions
 
-Summarize your findings and their implications.
+Include a biorender generated image of conclusions (center align)
 
 ## References
 
