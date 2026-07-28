@@ -16,11 +16,11 @@ about:
 
 ::: {.columnpage}
 
-# Hello! 👋
+# Hello! <i class="bi bi-emoji-laughing"></i>
 
 Welcome to my research profile website. I'm a student in the Intro to Reproducible Data Analysis Using R course.
 
-## About Me 
+## About Me <i class="bi bi-person-raised-hand"></i>
 
 
 **Name:** Morgan Yashchenko (yuh-SHEN-koh)<br>
@@ -28,7 +28,7 @@ Welcome to my research profile website. I'm a student in the Intro to Reproducib
 **Research Interests:** T cells and neutrophils in Polycystic Kidney Disease<br>
 **Email:** morgan-yashchenko@ou.edu<br>
 
-## My Research
+## My Research <i class="bi bi-beaker"></i>
 
 I'm interested in understanding how immune cells and inflammation promote rapidly progressing Polycystic Kidney Disease. Through this course, I've learned how to:
 
@@ -39,7 +39,7 @@ I'm interested in understanding how immune cells and inflammation promote rapidl
   <li>Manage my research projects with Git and GitHub</li>
 </ul>
 
-## This Website
+## This Website <i class="bi bi-globe"></i>
 
 This site showcases my research and projects. Check out my **Projects** page to see my final report and other work!
 

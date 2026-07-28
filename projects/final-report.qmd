@@ -21,10 +21,8 @@ Let's do some EDA to see if there is anything that sticks out.
 ## Methods
 
 ### For the injury model
-Biorender generated workflow image
-
-#### Analyses we performed
-We performed flow cytometry, serum blood urea nitrogen (BUN) assay, H&E and PicroSirius histology for cystic analysis and fibrosis measurements on the following groups:
+#### Workflow
+![ ](injury_workflow1.png){width="60%" fig-align="left"}
 
 #### Experimental groups
 
@@ -37,9 +35,9 @@ We performed flow cytometry, serum blood urea nitrogen (BUN) assay, H&E and Picr
 | No | injured | + |
 | No | injured | KO |
 
-### For the non-injury (juvenile induced) rapid model
-
-Biorender generated workflow image
+### For the no-injury (juvenile induced) rapid model
+#### Workflow
+![ ](noninjury_workflow1.png){width="60%" fig-align="left"}
 
 #### Experimental groups
 
@@ -49,6 +47,12 @@ Biorender generated workflow image
 | Yes | IgG isotype |
 | No | XMG1.2 |
 | No | IgG isotype |
+
+#### Analyses we performed
+We performed flow cytometry, cystic analysis on H&E stained tissue, serum blood urea nitrogen (BUN) assay, and fibrosis analysis on PicroSirius stained tissue.
+
+
+![ ](readouts1.png){width="80%" fig-align="center"}
 
 ## Results
 
@@ -64,6 +68,11 @@ Share your findings here. You can include:
 First, here are the packages used for this analysis:
 
 ```{r}
+
+#| echo: true
+#| message: false
+#| warning: false
+
 # Load a library
 library(ggplot2)
 library(tidyverse)
