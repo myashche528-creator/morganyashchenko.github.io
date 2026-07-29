@@ -56,67 +56,226 @@ We performed flow cytometry, cystic analysis on H&E stained tissue, serum blood 
 
 ## Results
 
-Share your findings here. You can include:
-
-- Text explanations
-- Tables
-- Figures and visualizations
-- Code examples (if relevant)
-
-### Example Code Block
-
 First, here are the packages used for this analysis:
 
 ```{r}
-
 #| echo: true
 #| message: false
 #| warning: false
 
-# Load a library
+library(readxl)
+library(dplyr)
 library(ggplot2)
 library(tidyverse)
 library(tidymodels)
+library(GGally)
 
-# Create some sample data
-data <- data.frame(
-  x = 1:10,
-  y = rnorm(10)
-)
+# Read the data
+data <- read_excel("injured_data.xlsx")
 
-# Make a plot
-plot(data$x, data$y)
+# Convert relevant columns to numeric
+data <- data %>%
+  mutate(across(
+    c(
+      contains("percent live immune"),
+      `Th17 count`,
+      `Neutrophil count`,
+      `2KWBW`,
+      `Cystic index`,
+      `Cyst size`,
+      `Cyst count`,
+      `BUN D56`
+    ),
+    as.numeric
+  ))
+
+# Filter to cystic mice treated with folic acid (FA)
+FA_cystic <- data %>%
+  filter(
+    `Cyst status` == "cystic",
+    `Treatment` == "FA"
+  )
+
+# Immune populations only
+PLI <- FA_cystic %>%
+  select(contains("percent live immune"))
+
+# Immune populations + disease parameters
+cor_data <- FA_cystic %>%
+  select(
+    contains("percent live immune"),
+    `2KWBW`,
+    `Cystic index`,
+    `Cyst size`,
+    `Cyst count`,
+    `BUN D56`
+  )
 ```
 
 
 Now, lets look at the data. What groups do we have?
 ```{r}
-#
+
+colnames(data)
 
 ```
-There are a lot of comparisons we can make, but let's choose the most relevant to our question. We first want to ask:
 
-### Do Th17 cell numbers correlate with disease parameters? (grid)
 
-So lets compare Th17 cell values per sample with:
+### Do Th17 cell proportions correlate with disease parameters?
 
-KW/BW?
-Cystic index?
-fibrosis?
-BUN?
+```{r}
+#| layout-ncol: 1
 
-### Do neutrophil numbers correlate with disease parameters? (grid)
-KW/BW?
-Cystic index?
-Fibrosis?
-BUN?
+#### KW/BW
+plot_data <- FA_cystic %>%
+  filter(!is.na(`2KWBW`), !is.na(`Th17 percent live immune`))
 
+# Fit linear model
+fit <- lm(`Th17 percent live immune` ~ `2KWBW`, data = plot_data)
+
+# Extract statistics
+r2 <- summary(fit)$r.squared
+p <- summary(fit)$coefficients[2, 4]
+
+a <- ggplot(plot_data, aes(x = `2KWBW`, y = `Th17 percent live immune`)) +
+  geom_point(size = 3, color = "maroon4") +
+  geom_smooth(method = "lm", se = TRUE, color = "firebrick") +
+  annotate("text", x = Inf, y = Inf, hjust = 1.1, vjust = 1.5, label = sprintf("R² = %.2f\np = %.3g", r2, p), size = 4) +
+  labs(title = "Correlation between 2KW/BW and Th17 cells as % live immune", x = "2KW/BW", y = "Th17 cells % live immune") +
+  theme_classic(base_size = 12)
+
+#### Cystic index
+plot_data <- FA_cystic %>%
+  filter(!is.na(`Cystic index`), !is.na(`Th17 percent live immune`))
+# Fit linear model
+fit <- lm(`Th17 percent live immune` ~ `Cystic index`, data = plot_data)
+
+# Extract statistics
+r2 <- summary(fit)$r.squared
+p <- summary(fit)$coefficients[2, 4]
+
+b <- ggplot(plot_data, aes(x = `Cystic index`, y = `Th17 percent live immune`)) +
+  geom_point(size = 3, color = "maroon4") +
+  geom_smooth(method = "lm", se = TRUE, color = "firebrick") +
+  annotate("text", x = Inf, y = Inf, hjust = 1.1, vjust = 1.5, label = sprintf("R² = %.2f\np = %.3g", r2, p), size = 4) +
+  labs(title = "Correlation between Cystic index and Th17 cells as % live immune", x = "% Cystic index", y = "Th17 cells % live immune") +
+  theme_classic(base_size = 12)
+
+#### BUN
+plot_data <- FA_cystic %>%
+  filter(!is.na(`BUN D56`), !is.na(`Th17 percent live immune`)
+  )
+# Fit linear model
+fit <- lm(`Th17 percent live immune` ~ `BUN D56`, data = plot_data)
+
+# Extract statistics
+r2 <- summary(fit)$r.squared
+p <- summary(fit)$coefficients[2, 4]
+
+c <- ggplot(plot_data, aes(x = `BUN D56`, y = `Th17 percent live immune`)) +
+  geom_point(size = 3, color = "maroon4") +
+  geom_smooth(method = "lm", se = TRUE, color = "firebrick") +
+  annotate("text", x = Inf, y = Inf, hjust = 1.1, vjust = 1.5, label = sprintf("R² = %.2f\np = %.3g", r2, p), size = 4) +
+  labs(title = "Correlation between Endpoint BUN and Th17 cells as % live immune", x = "BUN (mg/dL)", y = "Th17 cells % live immune") +
+  theme_classic(base_size = 12)
+a
+b
+c
+```
+
+### Do neutrophil proportions correlate with disease parameters?
+
+```{r}
+#| layout-ncol: 1
+
+
+#### KW/BW
+# Fit linear model
+fit <- lm(`Neutrophils percent live immune` ~ `2KWBW`, data = plot_data)
+
+# Extract statistics
+r2 <- summary(fit)$r.squared
+p <- summary(fit)$coefficients[2, 4]
+
+d <- ggplot(plot_data, aes(x = `2KWBW`, y = `Neutrophils percent live immune`)) +
+  geom_point(size = 3, color = "darkorange1") +
+  geom_smooth(method = "lm", se = TRUE, color = "firebrick") +
+  annotate("text", x = Inf, y = Inf, hjust = 1.1, vjust = 1.5, label = sprintf("R² = %.2f\np = %.3g", r2, p), size = 4) +
+  labs(title = "Correlation between 2KW/BW and Neutrophils as % live immune", x = "2KW/BW", y = "Neutrophils % live immune") +
+  theme_classic(base_size = 12)
+
+#### Cystic index
+# Fit linear model
+fit <- lm(`Neutrophils percent live immune` ~ `Cystic index`, data = plot_data)
+
+# Extract statistics
+r2 <- summary(fit)$r.squared
+p <- summary(fit)$coefficients[2, 4]
+
+e <- ggplot(plot_data, aes(x = `Cystic index`, y = `Neutrophils percent live immune`)) +
+  geom_point(size = 3, color = "darkorange1") +
+  geom_smooth(method = "lm", se = TRUE, color = "firebrick") +
+  annotate("text", x = Inf, y = Inf, hjust = 1.1, vjust = 1.5, label = sprintf("R² = %.2f\np = %.3g", r2, p), size = 4) +
+  labs(title = "Correlation between Cystic index and Neutrophils as % live immune", x = "% Cystic index", y = "Neutrophils % live immune") +
+  theme_classic(base_size = 12)
+
+#### BUN
+# Fit linear model
+fit <- lm(`Neutrophils percent live immune` ~ `BUN D56`, data = plot_data)
+
+# Extract statistics
+r2 <- summary(fit)$r.squared
+p <- summary(fit)$coefficients[2, 4]
+
+f <- ggplot(plot_data, aes(x = `BUN D56`, y = `Neutrophils percent live immune`)) +
+  geom_point(size = 3, color = "darkorange1") +
+  geom_smooth(method = "lm", se = TRUE, color = "firebrick") +
+  annotate("text", x = Inf, y = Inf, hjust = 1.1, vjust = 1.5, label = sprintf("R² = %.2f\np = %.3g", r2, p), size = 4) +
+  labs(title = "Correlation between Endpoint BUN and Neutrophils as % live immune", x = "BUN (mg/dL)", y = "Neutrophils % live immune") +
+  theme_classic(base_size = 12)
+d
+e
+f
+
+```
+
+### Can we quantify correlation strength between each cell type vs disease parameter?
+
+```{r}
+# Calculate Spearman correlation matrix
+cor_matrix <- cor(cor_data,
+  use = "pairwise.complete.obs",
+  method = "spearman")
+
+# Keep only percent live immune (PLI) populations vs disease parameters
+PLI_disease_cor <- cor_matrix[colnames(PLI), c("2KWBW", "Cystic index", "Cyst size", "Cyst count", "BUN D56")]
+
+# Rename columns for readability
+colnames(PLI_disease_cor) <- c("KW/BW", "Cystic index", "Cyst size", "Cyst count", "BUN")
+
+# Convert matrix to long format
+heatmap_data <- as.data.frame(PLI_disease_cor) %>%
+  tibble::rownames_to_column("Cell type") %>%
+  pivot_longer(-`Cell type`, names_to = "Disease parameter", values_to = "Correlation")
+
+# Plot heatmap
+ggplot(heatmap_data, aes(x = `Disease parameter`, y = `Cell type`, fill = Correlation)) +
+  geom_tile(color = "white") +
+  geom_text(aes(label = sprintf("%.2f", Correlation)), size = 3.5) +
+  scale_fill_gradient2(low = "steelblue4", mid = "white", high = "maroon4", midpoint = 0, limits = c(-1, 1), name = "Spearman") +
+  labs(title = "Immune cell correlations with PKD disease severity", x = NULL, y = NULL) +
+  theme_classic(base_size = 12) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), axis.text.y = element_text(size = 10))
+```
 
 ### What about in our non-injured, rapidly-progressing model?
 Th17 and neutrophil correllations of parameters
 
-heatmap?
+```{r}
+#Here I want a UMAP of Neutrophils and Th17 cells as percent live immune colored by injury with open circles for Veh treated and closed circles for FA
 
+
+```
 
 ## Discussion
 
@@ -128,7 +287,7 @@ Include a biorender generated image of conclusions (center align)
 
 ## References
 
-Add any references to papers, data sources, or resources you used.
+My own blood, sweat, and tears <i class="bi bi-flask"></i>
 
 ---
 

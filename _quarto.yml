@@ -23,7 +23,7 @@ format:
     theme: cosmo
     toc: true
     css: styles.css
-    code-overflow: wrap
+    code-fold: true
     footer: "© 2026 My Research Profile | Built with Quarto"
 
 editor: source
