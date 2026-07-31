@@ -45,7 +45,7 @@ This site showcases my research and projects. Check out my **Projects** page to 
 
 As my research progresses, I'll continue adding:
 
-<ul style="padding-left: 1rem; margin-left: 0;">
+<ul style="padding-center: 1rem; margin-left: 0;">
   <li>Publications</li>
   <li>Conference posters</li>
   <li>New analyses and projects</li>
